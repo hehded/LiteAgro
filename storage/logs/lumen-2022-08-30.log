@@ -1,0 +1,274 @@
+[2022-08-30 06:20:09] local.ERROR: Command "serve" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"serve\" is not defined. at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\symfony\\console\\Application.php:692)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('serve')
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\console\\Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2022-08-30 06:27:53] local.ERROR: Command "server" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"server\" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\symfony\\console\\Application.php:692)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('server')
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\console\\Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(116): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2022-08-30 07:13:50] local.ERROR: Class "App\Http\Controllers\Product" not found {"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\Product\" not found at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Controllers\\ProductController.php:30)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\ProductController->store(Object(Laravel\\Lumen\\Http\\Request))
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#4 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#5 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#6 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#7 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\ProductController), 'store', Array)
+#8 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#9 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#10 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#11 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(48): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#12 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Middleware\\ExampleMiddleware.php(18): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#13 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(180): App\\Http\\Middleware\\ExampleMiddleware->handle(Object(Laravel\\Lumen\\Http\\Request), Object(Closure))
+#14 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#15 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(116): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#16 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(426): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#17 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#18 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#19 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#20 {main}
+"} 
+[2022-08-30 07:15:19] local.ERROR: Class "App\Http\Controllers\Product" not found {"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\Product\" not found at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Controllers\\ProductController.php:30)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\ProductController->store(Object(Laravel\\Lumen\\Http\\Request))
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#4 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#5 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#6 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#7 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\ProductController), 'store', Array)
+#8 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#9 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#10 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#11 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(48): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#12 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Middleware\\ExampleMiddleware.php(18): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#13 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(180): App\\Http\\Middleware\\ExampleMiddleware->handle(Object(Laravel\\Lumen\\Http\\Request), Object(Closure))
+#14 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#15 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(116): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#16 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(426): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#17 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#18 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#19 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#20 {main}
+"} 
+[2022-08-30 07:17:22] local.ERROR: Class "App\Http\Controllers\Product" not found {"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\Product\" not found at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Controllers\\ProductController.php:30)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\ProductController->store(Object(Laravel\\Lumen\\Http\\Request))
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#4 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#5 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#6 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#7 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\ProductController), 'store', Array)
+#8 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#9 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#10 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#11 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(48): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#12 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Middleware\\ExampleMiddleware.php(18): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#13 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(180): App\\Http\\Middleware\\ExampleMiddleware->handle(Object(Laravel\\Lumen\\Http\\Request), Object(Closure))
+#14 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#15 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(116): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#16 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(426): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#17 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#18 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#19 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#20 {main}
+"} 
+[2022-08-30 07:25:37] local.ERROR: Class "App\Http\Controllers\Product" not found {"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\Product\" not found at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Controllers\\ProductController.php:64)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\ProductController->show('create')
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#4 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#5 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#6 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#7 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\ProductController), 'show', Array)
+#8 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#9 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#10 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(237): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#11 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(173): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#12 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(48): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#13 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Middleware\\ExampleMiddleware.php(18): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#14 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(180): App\\Http\\Middleware\\ExampleMiddleware->handle(Object(Laravel\\Lumen\\Http\\Request), Object(Closure))
+#15 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#16 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(116): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#17 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(426): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#18 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#19 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#20 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#21 {main}
+"} 
+[2022-08-30 07:25:54] local.ERROR: Class "App\Http\Controllers\Product" not found {"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\Product\" not found at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Controllers\\ProductController.php:64)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\ProductController->show('create')
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#4 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#5 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#6 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#7 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\ProductController), 'show', Array)
+#8 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#9 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#10 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(237): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#11 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(173): Laravel\\Lumen\\Application->handleDispatcherResponse(Array)
+#12 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(48): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#13 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Middleware\\ExampleMiddleware.php(18): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#14 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(180): App\\Http\\Middleware\\ExampleMiddleware->handle(Object(Laravel\\Lumen\\Http\\Request), Object(Closure))
+#15 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#16 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(116): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#17 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(426): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#18 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#19 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#20 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#21 {main}
+"} 
+[2022-08-30 07:31:49] local.ERROR: SQLSTATE[HY000]: General error: 1364 Field 'photo' doesn't have a default value (SQL: insert into `products` (`title`, `price`, `description`, `updated_at`, `created_at`) values (something, 1, adasdaasd, 2022-08-30 07:31:49, 2022-08-30 07:31:49)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1364 Field 'photo' doesn't have a default value (SQL: insert into `products` (`title`, `price`, `description`, `updated_at`, `created_at`) values (something, 1, adasdaasd, 2022-08-30 07:31:49, 2022-08-30 07:31:49)) at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Connection.php:759)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Connection.php(719): Illuminate\\Database\\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Connection.php(545): Illuminate\\Database\\Connection->run('insert into `pr...', Array, Object(Closure))
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Connection.php(497): Illuminate\\Database\\Connection->statement('insert into `pr...', Array)
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Query\\Processors\\Processor.php(32): Illuminate\\Database\\Connection->insert('insert into `pr...', Array)
+#4 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Query\\Builder.php(3246): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId(Object(Illuminate\\Database\\Query\\Builder), 'insert into `pr...', Array, 'id')
+#5 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Eloquent\\Builder.php(1858): Illuminate\\Database\\Query\\Builder->insertGetId(Array, 'id')
+#6 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Eloquent\\Model.php(1216): Illuminate\\Database\\Eloquent\\Builder->__call('insertGetId', Array)
+#7 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Eloquent\\Model.php(1181): Illuminate\\Database\\Eloquent\\Model->insertAndSetId(Object(Illuminate\\Database\\Eloquent\\Builder), Array)
+#8 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Eloquent\\Model.php(1022): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Controllers\\ProductController.php(54): Illuminate\\Database\\Eloquent\\Model->save()
+#10 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\ProductController->store(Object(Laravel\\Lumen\\Http\\Request))
+#11 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#12 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#13 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#14 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#15 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#16 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#17 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\ProductController), 'store', Array)
+#18 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#19 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#20 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#21 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(48): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#22 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Middleware\\ExampleMiddleware.php(18): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#23 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(180): App\\Http\\Middleware\\ExampleMiddleware->handle(Object(Laravel\\Lumen\\Http\\Request), Object(Closure))
+#24 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#25 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(116): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#26 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(426): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#28 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#29 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#30 {main}
+
+[previous exception] [object] (PDOException(code: HY000): SQLSTATE[HY000]: General error: 1364 Field 'photo' doesn't have a default value at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Connection.php:544)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Connection.php(544): PDOStatement->execute()
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Connection.php(752): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('insert into `pr...', Array)
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Connection.php(719): Illuminate\\Database\\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Connection.php(545): Illuminate\\Database\\Connection->run('insert into `pr...', Array, Object(Closure))
+#4 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Connection.php(497): Illuminate\\Database\\Connection->statement('insert into `pr...', Array)
+#5 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Query\\Processors\\Processor.php(32): Illuminate\\Database\\Connection->insert('insert into `pr...', Array)
+#6 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Query\\Builder.php(3246): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId(Object(Illuminate\\Database\\Query\\Builder), 'insert into `pr...', Array, 'id')
+#7 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Eloquent\\Builder.php(1858): Illuminate\\Database\\Query\\Builder->insertGetId(Array, 'id')
+#8 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Eloquent\\Model.php(1216): Illuminate\\Database\\Eloquent\\Builder->__call('insertGetId', Array)
+#9 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Eloquent\\Model.php(1181): Illuminate\\Database\\Eloquent\\Model->insertAndSetId(Object(Illuminate\\Database\\Eloquent\\Builder), Array)
+#10 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\database\\Eloquent\\Model.php(1022): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#11 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Controllers\\ProductController.php(54): Illuminate\\Database\\Eloquent\\Model->save()
+#12 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(36): App\\Http\\Controllers\\ProductController->store(Object(Laravel\\Lumen\\Http\\Request))
+#13 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#15 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#16 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#17 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(389): Illuminate\\Container\\Container->call(Array, Array)
+#18 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(355): Laravel\\Lumen\\Application->callControllerCallable(Array, Array)
+#19 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(329): Laravel\\Lumen\\Application->callLumenController(Object(App\\Http\\Controllers\\ProductController), 'store', Array)
+#20 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(282): Laravel\\Lumen\\Application->callControllerAction(Array)
+#21 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(267): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#22 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(169): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#23 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(48): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#24 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\app\\Http\\Middleware\\ExampleMiddleware.php(18): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#25 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(180): App\\Http\\Middleware\\ExampleMiddleware->handle(Object(Laravel\\Lumen\\Http\\Request), Object(Closure))
+#26 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Pipeline.php(30): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#27 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\illuminate\\pipeline\\Pipeline.php(116): Laravel\\Lumen\\Routing\\Pipeline->Laravel\\Lumen\\Routing\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#28 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(426): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#29 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(175): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#30 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(112): Laravel\\Lumen\\Application->dispatch(NULL)
+#31 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#32 {main}
+"} 
+[2022-08-30 13:49:18] local.ERROR: Call to undefined method Laravel\Lumen\Routing\Router::name() {"exception":"[object] (Error(code: 0): Call to undefined method Laravel\\Lumen\\Routing\\Router::name() at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\routes\\web.php:35)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(112): require()
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\artisan(18): require('C:\\\\Users\\\\User\\\\P...')
+#4 {main}
+"} 
+[2022-08-30 13:49:47] local.ERROR: Call to undefined method Laravel\Lumen\Routing\Router::name() {"exception":"[object] (Error(code: 0): Call to undefined method Laravel\\Lumen\\Routing\\Router::name() at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\routes\\web.php:37)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(112): require()
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\artisan(18): require('C:\\\\Users\\\\User\\\\P...')
+#4 {main}
+"} 
+[2022-08-30 13:50:07] local.ERROR: Call to undefined method FastRoute\Route::get() {"exception":"[object] (Error(code: 0): Call to undefined method FastRoute\\Route::get() at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\routes\\web.php:37)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(112): require()
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\artisan(18): require('C:\\\\Users\\\\User\\\\P...')
+#4 {main}
+"} 
+[2022-08-30 13:51:36] local.ERROR: Call to undefined method FastRoute\Route::get() {"exception":"[object] (Error(code: 0): Call to undefined method FastRoute\\Route::get() at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\routes\\web.php:19)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(112): require()
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\artisan(18): require('C:\\\\Users\\\\User\\\\P...')
+#4 {main}
+"} 
+[2022-08-30 13:51:49] local.ERROR: Call to undefined method FastRoute\Route::get() {"exception":"[object] (Error(code: 0): Call to undefined method FastRoute\\Route::get() at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\routes\\web.php:39)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(112): require()
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\artisan(18): require('C:\\\\Users\\\\User\\\\P...')
+#4 {main}
+"} 
+[2022-08-30 13:53:21] local.ERROR: Call to undefined method FastRoute\Route::get() {"exception":"[object] (Error(code: 0): Call to undefined method FastRoute\\Route::get() at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\routes\\web.php:39)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(112): require()
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\artisan(18): require('C:\\\\Users\\\\User\\\\P...')
+#4 {main}
+"} 
+[2022-08-30 13:54:14] local.ERROR: Call to undefined method Laravel\Lumen\Routing\Router::name() {"exception":"[object] (Error(code: 0): Call to undefined method Laravel\\Lumen\\Routing\\Router::name() at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\routes\\web.php:18)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(112): require()
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\artisan(18): require('C:\\\\Users\\\\User\\\\P...')
+#4 {main}
+"} 

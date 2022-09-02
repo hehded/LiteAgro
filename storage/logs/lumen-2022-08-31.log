@@ -1,0 +1,8 @@
+[2022-08-31 04:56:42] local.ERROR: Call to undefined method Laravel\Lumen\Routing\Router::name() {"exception":"[object] (Error(code: 0): Call to undefined method Laravel\\Lumen\\Routing\\Router::name() at C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\routes\\web.php:18)
+[stacktrace]
+#0 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(112): require()
+#1 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\vendor\\laravel\\lumen-framework\\src\\Routing\\Router.php(62): {closure}(Object(Laravel\\Lumen\\Routing\\Router))
+#2 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\bootstrap\\app.php(113): Laravel\\Lumen\\Routing\\Router->group(Array, Object(Closure))
+#3 C:\\Users\\User\\PhpstormProjects\\untitled2\\products_api\\artisan(18): require('C:\\\\Users\\\\User\\\\P...')
+#4 {main}
+"} 
