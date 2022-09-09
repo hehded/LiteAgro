@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('field', function (Blueprint $table) {
             $table->id();
-            $table->foreign('field_id')->references('id')->on(field);
+            $table->foreign('field_id')->references('id')->on('field');
             $table->text('address');
             $table->double('area');
             $table->string('type');

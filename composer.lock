@@ -4,8 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c25691551003e12bc999c82c289f74ab",
+    "content-hash": "a766fb4444d842b4df9f2621429c2c18",
     "packages": [
+        {
+            "name": "art4/json-api-client",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Art4/json-api-client.git",
+                "reference": "1216f92a05409858583debffc1f21968730ba269"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Art4/json-api-client/zipball/1216f92a05409858583debffc1f21968730ba269",
+                "reference": "1216f92a05409858583debffc1f21968730ba269",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.99",
+                "phpunit/phpunit": "^9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Art4\\JsonApiClient\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Artur Weigandt",
+                    "email": "art4@wlabs.de",
+                    "homepage": "https://wlabs.de"
+                }
+            ],
+            "description": "JSON API client",
+            "homepage": "https://github.com/Art4/json-api-client",
+            "keywords": [
+                "JSON-API",
+                "api",
+                "client",
+                "json",
+                "parser",
+                "reader",
+                "validator"
+            ],
+            "support": {
+                "issues": "https://github.com/Art4/json-api-client/issues",
+                "source": "https://github.com/Art4/json-api-client/tree/1.1.0"
+            },
+            "time": "2021-10-05T11:52:31+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.10.2",
@@ -472,6 +527,62 @@
                 "source": "https://github.com/flipboxstudio/lumen-generator/tree/9.1.0"
             },
             "time": "2022-03-26T00:47:39+00:00"
+        },
+        {
+            "name": "floor9design/json-api-formatter",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/floor9design-ltd/json-api-formatter.git",
+                "reference": "3eb7dcb5a51f7a4c1ca46f6aace2d04cee360e9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/floor9design-ltd/json-api-formatter/zipball/3eb7dcb5a51f7a4c1ca46f6aace2d04cee360e9c",
+                "reference": "3eb7dcb5a51f7a4c1ca46f6aace2d04cee360e9c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "floor9design/testing-tools": "^1.3",
+                "mockery/mockery": "dev-master",
+                "phpstan/phpstan": "^1.0.0",
+                "phpunit/phpunit": "^9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Floor9design\\JsonApiFormatter\\": "src",
+                    "Floor9design\\JsonApiFormatter\\Tests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rick Morice",
+                    "email": "rick@floor9design.com",
+                    "homepage": "https://floor9design.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A set classes that allow for creating JSON API compliant objects",
+            "homepage": "https://github.com/floor9design-ltd/json-api-formatter",
+            "keywords": [
+                "api",
+                "floor9design",
+                "rest"
+            ],
+            "support": {
+                "issues": "https://github.com/floor9design-ltd/json-api-formatter/issues",
+                "source": "https://github.com/floor9design-ltd/json-api-formatter/tree/1.1.0"
+            },
+            "time": "2022-05-03T23:39:05+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -7134,5 +7245,5 @@
         "php": "^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.3.0"
 }
