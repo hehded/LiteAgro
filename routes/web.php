@@ -41,21 +41,21 @@ use Illuminate\Support\Facades\Route;
 $router->get('company', 'CompanyController@GetAllCompany');
 $router->get('company/{id}', 'CompanyController@GetCompanyId');
 $router->get('company/json', 'CompanyController@GetCompanyJson');
-$router->get('company/post', 'CompanyController@CreateCompany');
-$router->get('company/patch/{id}', 'CompanyController@UpdateCompany');
-$router->get('company/delete/{id}', 'CompanyController@DeleteCompany');
+$router->post('company/post', 'CompanyController@CreateCompany');
+$router->patch('company/patch/{id}', 'CompanyController@UpdateCompany');
+$router->delete('company/delete/{id}', 'CompanyController@DeleteCompany');
 
 // User routes
 $router->get('user', 'UserController@GetAllUsers');
-$router->get('user/post', 'UserController@CreateUser');
-$router->get('user/patch/{id}', 'UserController@UpdateUser');
-$router->get('user/delete/{id}', 'UserController@DeleteUser');
+$router->post('user/post', 'UserController@CreateUser');
+$router->patch('user/patch/{id}', 'UserController@UpdateUser');
+$router->delete('user/delete/{id}', 'UserController@DeleteUser');
 
 //Field routes
 
 $router->get('field', 'FieldController@GetAllFields');
-$router->get('field/post', 'FieldController@CreateField');
-$router->get('field/patch/{id}', 'FieldController@UpdateField');
-$router->get('field/delete/{id}', 'FieldController@DeleteField');
+$router->post('field/post', 'FieldController@CreateField');
+$router->patch('field/patch/{id}', 'FieldController@UpdateField');
+$router->delete('field/delete/{id}', 'FieldController@DeleteField');
 
 
