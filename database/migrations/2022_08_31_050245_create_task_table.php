@@ -20,6 +20,8 @@ return new class extends Migration
             $table->foreign('field_id')->references('id')->on('field');
             $table->time('timeStart');
             $table->time('timeEnd');
+            $table->string('type');
+            $table->string('description', 512);
         });
     }
 

@@ -18,8 +18,9 @@ return new class extends Migration
             $table->foreign('company_id')->references('id')->on('company');
             $table->string('name');
             $table->string('surname');
-            $table->text('phone');
+            $table->string('phone', 32);
             $table->string('role');
+            $table->string('login', 6);
         });
     }
 

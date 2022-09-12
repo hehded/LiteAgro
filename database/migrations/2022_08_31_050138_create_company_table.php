@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('reg_nr');
             $table->string('vat_nr');
-            $table->text('address');
-            $table->text('phone');
+            $table->string('address', 512);
+            $table->string('phone', 32);
         });
     }
 
