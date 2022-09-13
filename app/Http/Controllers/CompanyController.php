@@ -11,14 +11,14 @@ use Floor9design\JsonApiFormatter\Models\DataResource;
 
 class CompanyController extends Controller
 {
-     public function GetAllCompany()
+     public function all()
     {
         $company = Company::all();
         return response() -> json($company);
 
     }
 
-    public function GetCompanyId($id)
+    public function id($id)
     {
         $company = Company::find($id);
         response()->json($company);
@@ -35,7 +35,7 @@ class CompanyController extends Controller
         return response()->GetCompanyJson($response);
     }
 
-    public function CreateCompany(Request $request)
+    public function create(Request $request)
     {
 
 
@@ -55,7 +55,7 @@ class CompanyController extends Controller
     }
 
 
-    public function UpdateCompany(Request $request, $id)
+    public function update(Request $request, $id)
     {
 
         $this->validate($request, [
@@ -80,7 +80,7 @@ class CompanyController extends Controller
     }
 
 
-    public function DeleteCompany($id)
+    public function delete($id)
     {
         $company = Company::find($id);
         $company->delete();

@@ -38,24 +38,24 @@ use Illuminate\Support\Facades\Route;
 
 
 // Company routes
-$router->get('company', 'CompanyController@GetAllCompany');
-$router->get('company/{id}', 'CompanyController@GetCompanyId');
+$router->get('company', 'CompanyController@all');
+$router->get('company/{id}', 'CompanyController@id');
 $router->get('company/json', 'CompanyController@GetCompanyJson');
-$router->post('company/post', 'CompanyController@CreateCompany');
-$router->patch('company/patch/{id}', 'CompanyController@UpdateCompany');
-$router->delete('company/delete/{id}', 'CompanyController@DeleteCompany');
+$router->post('company/post', 'CompanyController@create');
+$router->patch('company/patch/{id}', 'CompanyController@update');
+$router->delete('company/delete/{id}', 'CompanyController@delete');
 
 // User routes
-$router->get('user', 'UserController@GetAllUsers');
-$router->post('user/post', 'UserController@CreateUser');
-$router->patch('user/patch/{id}', 'UserController@UpdateUser');
-$router->delete('user/delete/{id}', 'UserController@DeleteUser');
+$router->get('user', 'UserController@all');
+$router->post('user/post', 'UserController@create');
+$router->patch('user/patch/{id}', 'UserController@update');
+$router->delete('user/delete/{id}', 'UserController@delete');
 
 //Field routes
 
-$router->get('field', 'FieldController@GetAllFields');
-$router->post('field/post', 'FieldController@CreateField');
-$router->patch('field/patch/{id}', 'FieldController@UpdateField');
-$router->delete('field/delete/{id}', 'FieldController@DeleteField');
+$router->get('field', 'FieldController@all');
+$router->post('field/post', 'FieldController@create');
+$router->patch('field/patch/{id}', 'FieldController@update');
+$router->delete('field/delete/{id}', 'FieldController@delete');
 
 

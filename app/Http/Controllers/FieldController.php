@@ -12,7 +12,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function GetAllField()
+    public function all()
     {
         // Get All products
         // get All Products From Database
@@ -22,7 +22,7 @@ class UserController extends Controller
     }
 
 
-    public function CreateField(Request $request)
+    public function create(Request $request)
     {
 
 
@@ -39,7 +39,7 @@ class UserController extends Controller
     }
 
 
-    public function UpdateField(Request $request, $id)
+    public function update(Request $request, $id)
     {
 
         $this->validate($request, [
@@ -62,7 +62,7 @@ class UserController extends Controller
     }
 
 
-    public function DeleteField($id)
+    public function delete($id)
     {
         $field = Field::find($id);
         $field->delete();

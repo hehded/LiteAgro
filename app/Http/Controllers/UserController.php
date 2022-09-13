@@ -12,7 +12,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function GetAllUsers()
+    public function all()
     {
         // Get All products
         // get All Products From Database
@@ -22,7 +22,7 @@ class UserController extends Controller
     }
 
 
-    public function CreateUser(Request $request)
+    public function create(Request $request)
     {
 
 
@@ -40,7 +40,7 @@ class UserController extends Controller
     }
 
 
-    public function UpdateUser(Request $request, $id)
+    public function update(Request $request, $id)
     {
 
         $this->validate($request, [
@@ -64,7 +64,7 @@ class UserController extends Controller
     }
 
 
-    public function DeleteUser($id)
+    public function delete($id)
     {
         // DELETE(id)
         // Delete by Id
