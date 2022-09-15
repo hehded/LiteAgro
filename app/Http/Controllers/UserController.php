@@ -73,4 +73,13 @@ class UserController extends Controller
         return response()->json('User Deleted Successfully');
 
     }
+
+    public function get($id)
+    {
+        // GET(id)
+        // Get by Id
+        $users = UserTable::find($id);
+        return response()->json($users);
+
+    }
 }

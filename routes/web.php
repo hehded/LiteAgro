@@ -38,7 +38,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // Company routes
-$router->get('company', 'CompanyController@all');
+$router->get('company', ['middleware'=>'auth', 'uses'=>'CompanyController@all']);
 $router->get('company/{id}', 'CompanyController@id');
 $router->get('company/json', 'CompanyController@GetCompanyJson');
 $router->post('company/post', 'CompanyController@create');
