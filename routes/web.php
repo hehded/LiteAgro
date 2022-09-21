@@ -1,61 +1,52 @@
 <?php
 
-/** @var \Laravel\Lumen\Routing\Router $router */
-
+use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\EnsureToken;
 /*
 |--------------------------------------------------------------------------
-| Application Routes
+| Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register all of the routes for an application.
-| It is a breeze. Simply tell Lumen the URIs it should respond to
-| and give it the Closure to call when that URI is requested.
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
-use Illuminate\Support\Facades\Route;
-
-
-
-// $router->/*get('/products', 'ProductController@index');
-
-
-// $router->get('/products/{id}', 'ProductController@show');
-
-
-// $router->post('/products/create', 'ProductController@store');
+Route::get('/company', 'App\Http\Controllers\CompanyController@all')->middleware(EnsureToken::class);
+Route::get('/company/{id}', 'App\Http\Controllers\CompanyController@id')->middleware(EnsureToken::class);
+Route::post('/company', 'App\Http\Controllers\CompanyController@create');
+Route::patch('/company/{id}', 'App\Http\Controllers\CompanyController@update');
+Route::delete('/company/{id}', 'App\Http\Controllers\CompanyController@delete');
 
 
-// $router->post('/products/update/{id}', 'ProductController@update');
+Route::get('/task', 'App\Http\Controllers\TaskController@all');
+Route::post('/task', 'App\Http\Controllers\TaskController@create');
+Route::patch('/task/{id}', 'App\Http\Controllers\TaskController@update');
+Route::delete('/task/{id}', 'App\Http\Controllers\TaskController@delete');
+Route::get('/task/{id}', 'App\Http\Controllers\TaskController@id');
+
+Route::get('/field', 'App\Http\Controllers\FieldController@all');
+Route::post('/field', 'App\Http\Controllers\FieldController@create');
+Route::patch('/field/{id}', 'App\Http\Controllers\FieldController@update');
+Route::delete('/field/{id}', 'App\Http\Controllers\FieldController@delete');
+Route::get('/field/{id}', 'App\Http\Controllers\FieldController@id');
+
+Route::get('/user', 'App\Http\Controllers\UserController@all');
+Route::post('/user', 'App\Http\Controllers\UserController@create');
+Route::patch('/user/{id}', 'App\Http\Controllers\UserController@update');
+Route::delete('/user/{id}', 'App\Http\Controllers\UserController@delete');
+Route::get('/user/{id}', 'App\Http\Controllers\UserController@id');
 
 
-// $router->delete('/products/delete/{id}', 'ProductController@destroy');*/
-
-/*$router->get('/', function () use ($router) {
-    return $router->app->version();
-});*/
 
 
-// Company routes
-$router->get('company', ['middleware'=>'auth', 'uses'=>'CompanyController@all']);
+/*$router->get('company', 'CompanyController@all');
 $router->get('company/{id}', 'CompanyController@id');
-$router->get('company/json', 'CompanyController@GetCompanyJson');
 $router->post('company/post', 'CompanyController@create');
 $router->patch('company/patch/{id}', 'CompanyController@update');
-$router->delete('company/delete/{id}', 'CompanyController@delete');
-
-// User routes
-$router->get('user', 'UserController@all');
-$router->post('user/post', 'UserController@create');
-$router->patch('user/patch/{id}', 'UserController@update');
-$router->delete('user/delete/{id}', 'UserController@delete');
-
-//Field routes
-
-$router->get('field', 'FieldController@all');
-$router->post('field/post', 'FieldController@create');
-$router->patch('field/patch/{id}', 'FieldController@update');
-$router->delete('field/delete/{id}', 'FieldController@delete');
-
-
+$router->delete('company/delete/{id}', 'CompanyController@delete');*/

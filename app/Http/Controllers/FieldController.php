@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Field;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class FieldController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

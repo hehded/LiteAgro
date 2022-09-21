@@ -4,14 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Company;
-use Floor9design\JsonApiFormatter\Models\JsonApiFormatter;
-use Floor9design\JsonApiFormatter\Models\DataResource;
-
-
 
 class CompanyController extends Controller
 {
-     public function all()
+    public function all()
     {
         $company = Company::all();
         return response() -> json($company);
@@ -25,7 +21,7 @@ class CompanyController extends Controller
 
     }
 
-    public function GetCompanyJson()
+    /*public function GetCompanyJson()
     {
         $id = "2";
         $vat_nr = 'test';
@@ -33,7 +29,7 @@ class CompanyController extends Controller
         $json_api_response = new JsonApiFormatter();
         $response = $json_api_response->dataResourceResponseArray($id, $vat_nr, $attributes);
         return response()->GetCompanyJson($response);
-    }
+    }*/
 
     public function create(Request $request)
     {
