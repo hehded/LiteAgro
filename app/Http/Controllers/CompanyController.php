@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Company;
+use App\Http\Middleware\EnsureToken;
 
 class CompanyController extends Controller
 {
     public function all()
     {
-        $company = Company::all();
+        $company = Company::join('users', 'company_id', '=', 'company.id')
+            ->where('users.id', '=', $user->id)->get();
         return response() -> json($company);
 
     }

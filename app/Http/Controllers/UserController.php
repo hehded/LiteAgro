@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\UserTable;
+use App\Models\Users;
 
 class UserController extends Controller
 {
@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         // Get All products
         // get All Products From Database
-        $users = UserTable::all();
+        $users = Users::all();
         return response()->json($users);
 
     }
@@ -26,7 +26,7 @@ class UserController extends Controller
     {
 
 
-        $users = new UserTable();
+        $users = new Users();
         $users->name = $request->input('name');
         $users->surname = $request->input('surname');
         $users->phone = $request->input('phone');
@@ -50,7 +50,7 @@ class UserController extends Controller
             'role' => 'required'
         ]);
 
-        $users = UserTable::find($id);
+        $users = Users::find($id);
 
 
         $users->name = $request->input('name');
@@ -68,7 +68,7 @@ class UserController extends Controller
     {
         // DELETE(id)
         // Delete by Id
-        $users = UserTable::find($id);
+        $users = Users::find($id);
         $users->delete();
         return response()->json('User Deleted Successfully');
 
@@ -78,7 +78,7 @@ class UserController extends Controller
     {
         // GET(id)
         // Get by Id
-        $users = UserTable::find($id);
+        $users = Users::find($id);
         return response()->json($users);
 
     }
