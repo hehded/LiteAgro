@@ -68,4 +68,24 @@ class FieldController extends Controller
         $field->delete();
         return response()->json('Field Deleted Successfully');
     }
+
+    public function filter($name)
+    {
+        $field = Field::where('name', $name)->get();
+        return response()->json($field);
+    }
+
+    //filter function to sort by name
+    public function sort($name)
+    {
+        $field = Field::orderBy('name', $name)->get();
+        return response()->json($field);
+    }
+
+    //filter function to filter by company id and sort by name
+    public function filterAndSort($name, $id)
+    {
+        $field = Field::where('company_id', $id)->orderBy('name', $name)->get();
+        return response()->json($field);
+    }
 }

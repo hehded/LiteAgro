@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Company;
 use App\Http\Middleware\EnsureToken;
+include 'C:\xampp\htdocs\laravel\app\Http\Middleware\EnsureToken.php';
 
 class CompanyController extends Controller
 {
@@ -84,4 +85,5 @@ class CompanyController extends Controller
         $company->delete();
         return response()->json('Company Deleted Successfully');
     }
+
 }
