@@ -15,17 +15,26 @@ class FieldController extends Controller
      */
     public function all(Request $request)
     {
-        // Get All products
-        // get All Products From Database
-        // dd($request->input());
-        $field = null;
-        if($request->input('filter')!=null){
-            $field = Field::where('id', 'like', '%'.$request->input('filter').'%')->get();}
-        else{
-            $field = Field::all();
-        }
-        return response()->json($field);
 
+        $query = Field::query();
+
+        if($request->input('filter')!=null){
+
+            if($request->input('filter.type')!=null){
+                $query->where('type', 'like', '%'.$request->input('filter.type').'%');
+            }
+            if($request->input('filter.address')!=null){
+                $query->where('address', 'like', '%'.$request->input('filter.address').'%');
+            }
+            if($request->input('filter.area')!=null){
+                $query->where('area', 'like', '%'.$request->input('filter.area').'%');
+            }
+            else{
+            $query = Field::all();
+            }
+            return response()->json($query->get());
+
+        }
     }
 
 
