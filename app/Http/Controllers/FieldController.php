@@ -8,7 +8,7 @@ use Termwind\Components\Dd;
 
 class FieldController extends Controller
 {
-     /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -18,23 +18,35 @@ class FieldController extends Controller
 
         $query = Field::query();
 
-        if($request->input('filter')!=null){
+        if ($request->input('filter') != null) {
 
-            if($request->input('filter.type')!=null){
-                $query->where('type', 'like', '%'.$request->input('filter.type').'%');
+            if ($request->input('filter.type') != null) {
+                $query->where('type', 'like', '%' . $request->input('filter.type') . '%');
             }
-            if($request->input('filter.address')!=null){
-                $query->where('address', 'like', '%'.$request->input('filter.address').'%');
+            if ($request->input('filter.address') != null) {
+                $query->where('address', 'like', '%' . $request->input('filter.address') . '%');
             }
-            if($request->input('filter.area')!=null){
-                $query->where('area', 'like', '%'.$request->input('filter.area').'%');
+            if ($request->input('filter.area') != null) {
+                $query->where('area', 'like', '%' . $request->input('filter.area') . '%');
+            } else {
+                $query = Field::all();
             }
-            else{
-            $query = Field::all();
-            }
-            return response()->json($query->get());
-
         }
+        // if function to order by area or type or address
+        if ($request->input('orderBy') != null) {
+            if ($request->input('orderBy') == 'type') {
+                $query->orderBy('type', 'asc', $request->input('orderBy'));
+            }
+            if ($request->input('orderBy') == 'address') {
+                $query->orderBy('address', 'asc', $request->input('orderBy'));
+            }
+            if ($request->input('orderBy') == 'area') {
+                $query->orderBy('area', 'asc', $request->input('orderBy'));
+            } else {
+                $query->orderby('id');
+            }
+        }
+        return response()->json($query->get());
     }
 
 
@@ -50,8 +62,6 @@ class FieldController extends Controller
 
         $field->save();
         return response()->json($field);
-
-
     }
 
 
@@ -74,7 +84,6 @@ class FieldController extends Controller
         $field->save();
 
         return response()->json($field);
-
     }
 
 

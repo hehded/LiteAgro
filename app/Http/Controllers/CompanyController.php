@@ -12,15 +12,13 @@ class CompanyController extends Controller
     public function all()
     {
         $company = Company::all();
-        return response() -> json($company);
-
+        return response()->json($company);
     }
 
     public function id($id)
     {
         $company = Company::find($id);
         response()->json($company);
-
     }
 
     /*public function GetCompanyJson()
@@ -48,8 +46,6 @@ class CompanyController extends Controller
 
         $company->save();
         return response()->json($company);
-
-
     }
 
 
@@ -74,7 +70,6 @@ class CompanyController extends Controller
         $company->save();
 
         return response()->json($company);
-
     }
 
 
@@ -84,5 +79,4 @@ class CompanyController extends Controller
         $company->delete();
         return response()->json('Company Deleted Successfully');
     }
-
 }
