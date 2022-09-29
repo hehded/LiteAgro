@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Field;
 use Illuminate\Http\Request;
+use Termwind\Components\Dd;
 
 class FieldController extends Controller
 {
@@ -12,11 +13,17 @@ class FieldController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function all()
+    public function all(Request $request)
     {
         // Get All products
         // get All Products From Database
-        $field = Field::all();
+        // dd($request->input());
+        $field = null;
+        if($request->input('filter')!=null){
+            $field = Field::where('id', 'like', '%'.$request->input('filter').'%')->get();}
+        else{
+            $field = Field::all();
+        }
         return response()->json($field);
 
     }

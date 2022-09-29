@@ -5,14 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Company;
 use App\Http\Middleware\EnsureToken;
-include 'C:\xampp\htdocs\laravel\app\Http\Middleware\EnsureToken.php';
+
 
 class CompanyController extends Controller
 {
     public function all()
     {
-        $company = Company::join('users', 'company_id', '=', 'company.id')
-            ->where('users.id', '=', $user->id)->get();
+        $company = Company::all();
         return response() -> json($company);
 
     }
