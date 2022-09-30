@@ -49,6 +49,11 @@ class CompanyController extends Controller
     }
 
 
+
+
+
+
+
     public function update(Request $request, $id)
     {
 
