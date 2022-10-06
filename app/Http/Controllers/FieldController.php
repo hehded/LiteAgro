@@ -18,6 +18,8 @@ class FieldController extends Controller
 
         $query = Field::query();
 
+        $query->where("company_id", $request->attributes("user")->company_id);
+
         if ($request->input('filter') != null) {
 
             if ($request->input('filter.type') != null) {
@@ -28,20 +30,16 @@ class FieldController extends Controller
             }
             if ($request->input('filter.area') != null) {
                 $query->where('area', 'like', '%' . $request->input('filter.area') . '%');
-            } else {
-                $query = Field::all();
             }
         }
         // if function to order by area or type or address
         if ($request->input('orderBy') != null) {
-            if ($request->input('orderBy') == '+type') {
+            // dd();
+            if ($request->input('orderBy') == 'type') {
                 $query->orderBy('type', 'asc', $request->input('orderBy'));
             }
-            if ($request->input('orderBy') == '+address') {
+            if ($request->input('orderBy') == 'address') {
                 $query->orderBy('address', 'asc', $request->input('orderBy'));
-            }
-            if ($request->input('orderBy') == '+area') {
-                $query->orderBy('area', 'asc', $request->input('orderBy'));
             }
             if ($request->input('orderBy') == '-type') {
                 $query->orderBy('type', 'desc', $request->input('orderBy'));
@@ -49,21 +47,15 @@ class FieldController extends Controller
             if ($request->input('orderBy') == '-address') {
                 $query->orderBy('address', 'desc', $request->input('orderBy'));
             }
-            if ($request->input('orderBy') == '-area') {
-                $query->orderBy('area', 'desc', $request->input('orderBy'));
-            }
-            if ($request->input('orderBy') == '+name') {
+            if ($request->input('orderBy') == 'name') {
                 $query->orderBy('name', 'asc', $request->input('orderBy'));
             }
             if ($request->input('orderBy') == '-name') {
                 $query->orderBy('name', 'desc', $request->input('orderBy'));
             }
-            else {
-                $query->orderby('id');
-            }
         }
 
-
+        //
         return response()->json($query->get());
     }
 
