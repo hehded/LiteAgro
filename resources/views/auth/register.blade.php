@@ -52,7 +52,7 @@
             </div>
             {{-- div to enter the company_id --}}
             <div class="mt-4">
-                <x-input-label for="company_id" :value="__('Company')" />
+                <x-input-label for="company_id" :value="__('Company_ID')" />
 
                 <x-text-input id="company_id" class="block mt-1 w-full" type="text" name="company_id" :value="old('company_id')" required autofocus />
 
