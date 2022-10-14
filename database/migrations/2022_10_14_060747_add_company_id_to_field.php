@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tasks', function (Blueprint $table) {
-            $table->id();
-            // $table->foreignId('user_id')->constrained('users');
-            $table->time('timeStart');
-            $table->time('timeEnd');
-            $table->string('type');
-            $table->string('description', 512);
+        Schema::table('fields', function (Blueprint $table) {
+            //add foreign key for company_id
+            $table->foreignId('company_id')->constrained('companies');
         });
     }
 
@@ -30,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('task');
+        Schema::table('field', function (Blueprint $table) {
+            //
+        });
     }
 };
