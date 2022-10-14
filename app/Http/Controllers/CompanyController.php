@@ -6,22 +6,30 @@ use Illuminate\Http\Request;
 use App\Models\Company;
 use App\Http\Middleware\EnsureToken;
 
+
 class CompanyController extends Controller
 {
     public function all()
     {
-        $company = Company::join('users', 'company_id', '=', 'company.id')
-            ->where('users.id', '=', $user->id)->get();
-        return response() -> json($company);
+        $company = Company::all();
+        return response()->json($company);
+    }
 
+    public function show()
+    {
+        $company = Company::all();
+        return view('dashboard', ['companies'=>$company]);
     }
 
     public function id($id)
     {
         $company = Company::find($id);
         response()->json($company);
-
     }
+
+    //function to show the data as json api requires
+    
+
 
     /*public function GetCompanyJson()
     {
@@ -48,9 +56,12 @@ class CompanyController extends Controller
 
         $company->save();
         return response()->json($company);
-
-
     }
+
+
+
+
+
 
 
     public function update(Request $request, $id)
@@ -74,7 +85,6 @@ class CompanyController extends Controller
         $company->save();
 
         return response()->json($company);
-
     }
 
 

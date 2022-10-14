@@ -13,12 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('field', function (Blueprint $table) {
+        Schema::create('fields', function (Blueprint $table) {
             $table->id();
-            $table->foreign('company_id')->references('id')->on('company');
+            // $table->foreignId('company_id')->constrained('companies');
             $table->string('address', 512);
             $table->text('area');
             $table->string('type');
+            //create foreign key for company_id
+            // $table->timestamps();
         });
 
     }

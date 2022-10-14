@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\EnsureToken;
+use App\Http\Controllers\CompanyController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,10 +13,6 @@ use App\Http\Middleware\EnsureToken;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/company', 'App\Http\Controllers\CompanyController@all')->middleware(EnsureToken::class);
 Route::get('/company/{id}', 'App\Http\Controllers\CompanyController@id')->middleware(EnsureToken::class);
@@ -43,10 +40,17 @@ Route::delete('/user/{id}', 'App\Http\Controllers\UserController@delete');
 Route::get('/user/{id}', 'App\Http\Controllers\UserController@id');
 
 
+Route::get('list', [CompanyController::class, 'show']);
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', [CompanyController::class, 'show'], function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+require __DIR__ . '/auth.php';
 
 
-/*$router->get('company', 'CompanyController@all');
-$router->get('company/{id}', 'CompanyController@id');
-$router->post('company/post', 'CompanyController@create');
-$router->patch('company/patch/{id}', 'CompanyController@update');
-$router->delete('company/delete/{id}', 'CompanyController@delete');*/
+
