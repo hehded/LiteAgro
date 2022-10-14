@@ -15,11 +15,21 @@ class CompanyController extends Controller
         return response()->json($company);
     }
 
+    public function show()
+    {
+        $company = Company::all();
+        return view('dashboard', ['companies'=>$company]);
+    }
+
     public function id($id)
     {
         $company = Company::find($id);
         response()->json($company);
     }
+
+    //function to show the data as json api requires
+    
+
 
     /*public function GetCompanyJson()
     {
