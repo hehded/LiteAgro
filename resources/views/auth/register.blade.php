@@ -39,6 +39,7 @@
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
 
+
             <!-- Confirm Password -->
             <div class="mt-4">
                 <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
@@ -48,6 +49,14 @@
                                 name="password_confirmation" required />
 
                 <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+            </div>
+            {{-- div to enter the company_id --}}
+            <div class="mt-4">
+                <x-input-label for="company_id" :value="__('Company')" />
+
+                <x-text-input id="company_id" class="block mt-1 w-full" type="text" name="company_id" :value="old('company_id')" required autofocus />
+
+                <x-input-error :messages="$errors->get('company_id')" class="mt-2" />
             </div>
 
             <div class="flex items-center justify-end mt-4">
