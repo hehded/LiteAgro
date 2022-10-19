@@ -13,6 +13,12 @@ class FieldController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function show()
+    {
+        $field = Field::all();
+        return view('dashboard', ['fields'=>$field]);
+    }
     public function all(Request $request)
     {
 
@@ -58,6 +64,7 @@ class FieldController extends Controller
         //
         return response()->json($query->get());
     }
+
 
 
 
@@ -128,4 +135,7 @@ class FieldController extends Controller
         $field = Field::where('company_id', $id)->orderBy('name', $name)->get();
         return response()->json($field);
     }
+
+
+
 }

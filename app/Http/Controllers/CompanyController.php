@@ -4,7 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Company;
+use App\Models\Field;
 use App\Http\Middleware\EnsureToken;
+use Illuminate\App\Http\Requests\Auth\LoginRequest;
+use Illuminate\Support\Facades\Auth;
+
+// Route::get('LoginRequest/{comp_id}', 'LoginRequest@getCompanyId')->name('')
 
 
 class CompanyController extends Controller
@@ -15,10 +20,15 @@ class CompanyController extends Controller
         return response()->json($company);
     }
 
-    public function show()
+    public function company()
     {
-        $company = Company::all();
-        return view('dashboard', ['companies'=>$company]);
+
+        $company = Company::find(Auth::user()->company_id);
+        $fields = Field::where('company_id', Auth::user()->company_id)->get();
+        return view ('dashboard', ['company'=>$company, "fields"=>$fields]);
+
+
+
     }
 
     public function id($id)
@@ -27,19 +37,19 @@ class CompanyController extends Controller
         response()->json($company);
     }
 
-    //function to show the data as json api requires
-    
 
 
-    /*public function GetCompanyJson()
-    {
-        $id = "2";
-        $vat_nr = 'test';
-        $attributes = ['test' => 'data'];
-        $json_api_response = new JsonApiFormatter();
-        $response = $json_api_response->dataResourceResponseArray($id, $vat_nr, $attributes);
-        return response()->GetCompanyJson($response);
-    }*/
+
+
+    // public function GetCompanyJson()
+    // {
+    //     $id = "2";
+    //     $vat_nr = 'test';
+    //     $attributes = ['test' => 'data'];
+    //     $json_api_response = new JsonApiFormatter();
+    //     $response = $json_api_response->dataResourceResponseArray($id, $vat_nr, $attributes);
+    //     return response()->GetCompanyJson($response);
+    // }
 
     public function create(Request $request)
     {

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\FieldController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,15 +41,21 @@ Route::delete('/user/{id}', 'App\Http\Controllers\UserController@delete');
 Route::get('/user/{id}', 'App\Http\Controllers\UserController@id');
 
 
-Route::get('list', [CompanyController::class, 'show']);
+// Route::get('/companyid', [CompanyController::class, 'company']);
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [CompanyController::class, 'show'], function () {
+Route::get('/dashboard', [CompanyController::class, 'company'],  function () {
+    return view('dashboard');
+});
+
+Route::get('/dashboard1', [FieldController::class, 'show'], function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
 
 require __DIR__ . '/auth.php';
 
