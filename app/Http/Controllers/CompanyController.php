@@ -8,6 +8,8 @@ use App\Models\Field;
 use App\Http\Middleware\EnsureToken;
 use Illuminate\App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Support\Facades\Auth;
+use Termwind\Components\Dd;
+use View;
 
 // Route::get('LoginRequest/{comp_id}', 'LoginRequest@getCompanyId')->name('')
 
@@ -25,11 +27,42 @@ class CompanyController extends Controller
 
         $company = Company::find(Auth::user()->company_id);
         $fields = Field::where('company_id', Auth::user()->company_id)->get();
-        return view ('dashboard', ['company'=>$company, "fields"=>$fields]);
+        return view('dashboard', ['company' => $company, "fields" => $fields]);
+    }
 
 
+    public function GetData($id)
+    {
+        $fields = Field::find($id);
+        return view('dashboardedit', ['data' => $fields]);
+    }
+
+
+    public function EditData(Request $request, $id)
+    {
+        $this->validate($request, [
+            'address' => 'required',
+            'area' => 'required',
+            'type' => 'required',
+        ]);
+
+
+        $fields = Field::find($id);
+        $fields->address = $request->input('address');
+        $fields->area = $request->input('area');
+        $fields->type = $request->input('type');
+        $fields->save();
+        return view('dashboard');
 
     }
+
+    public function DeleteData($id)
+    {
+        $fields = Field::find($id);
+        $fields->delete();
+        return view('dashboard');
+    }
+
 
     public function id($id)
     {
@@ -54,6 +87,7 @@ class CompanyController extends Controller
     public function create(Request $request)
     {
 
+        
 
         $company = new Company();
         $company->name = $request->input('name');

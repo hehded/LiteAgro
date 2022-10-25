@@ -40,6 +40,18 @@ Route::patch('/user/{id}', 'App\Http\Controllers\UserController@update');
 Route::delete('/user/{id}', 'App\Http\Controllers\UserController@delete');
 Route::get('/user/{id}', 'App\Http\Controllers\UserController@id');
 
+Route::get('/dashboard/edit/{id}', [CompanyController::class, 'GetData'], function(){
+    return view('dashboardedit');
+});
+
+Route::post('/dashboard/edit/dataUpdate{id}', [CompanyController::class, 'EditData'], function(){
+    return view('dashboard');
+});
+
+Route::get('dashboard/delete/{id}', [CompanyController::class, 'DeleteData'], function(){
+    return view('dashboard');
+});
+
 
 // Route::get('/companyid', [CompanyController::class, 'company']);
 
