@@ -4,6 +4,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ $company->name }}
         </h2>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded"><a href="{{ url('/dashboard/createpage')}}">Create</a></button>
 
     </x-slot>
 

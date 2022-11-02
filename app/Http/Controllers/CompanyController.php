@@ -38,6 +38,21 @@ class CompanyController extends Controller
     }
 
 
+    public function CreateData(Request $request)
+    {
+
+
+
+        $fields = new Field();
+        $fields->address = $request->input('address');
+        $fields->area = $request->input('area');
+        $fields->type = $request->input('type');
+        $fields->company_id = $request->input('company_id');
+        $fields->save();
+        return redirect('/dashboard');
+    }
+
+
     public function EditData(Request $request, $id)
     {
         $this->validate($request, [
@@ -52,7 +67,7 @@ class CompanyController extends Controller
         $fields->area = $request->input('area');
         $fields->type = $request->input('type');
         $fields->save();
-        return view('dashboard');
+        return redirect('/dashboard');
 
     }
 
@@ -60,7 +75,7 @@ class CompanyController extends Controller
     {
         $fields = Field::find($id);
         $fields->delete();
-        return view('dashboard');
+        return redirect('/dashboard');
     }
 
 
@@ -87,7 +102,7 @@ class CompanyController extends Controller
     public function create(Request $request)
     {
 
-        
+
 
         $company = new Company();
         $company->name = $request->input('name');

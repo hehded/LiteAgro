@@ -48,6 +48,14 @@ Route::post('/dashboard/edit/dataUpdate{id}', [CompanyController::class, 'EditDa
     return view('dashboard');
 });
 
+Route::get('/dashboard/createpage', function(){
+    return view('dashboardadd');
+});
+
+Route::post('/dashboard/dataCreate', [CompanyController::class, 'CreateData'], function(){
+    return view('dashboard');
+});
+
 Route::get('dashboard/delete/{id}', [CompanyController::class, 'DeleteData'], function(){
     return view('dashboard');
 });
