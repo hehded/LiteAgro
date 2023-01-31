@@ -1,28 +1,13 @@
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
-   <link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />  
-   <script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>  
-<!-- add leaflet ajax script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
-     <!-- add script src to public/geojson folder -->
-       
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-     
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@7.1.1-dev.1671489689191/dist/ol.css">
+<script src="https://cdn.jsdelivr.net/npm/ol@7.1.1-dev.1671489689191/dist/ol.js"></script>
 
 <x-app-layout>
     <x-slot name="header">
 
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             LiteAgro
-            
         </h2>
+        
         
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded"><a
                 href="{{ url('/tasks') }}">Tasks</a>
@@ -37,8 +22,8 @@
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded"><a
                 href="{{ url('/dashboard') }}">Fields</a>
             </button>
-
     </x-slot>
+    
 
 
 
@@ -53,44 +38,55 @@
                                 class="border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
                                 <th
                                     class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
-                                    Address</th>
+                                    ID</th>
                                 <th
                                     class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
-                                    Area</th>
+                                    Name</th>
                                 <th
                                     class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
-                                    Type</th>
+                                    Email</th>
+
                                 <th
                                     class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
-                                    Company ID</th>
-                                <th
+                                    Company_ID</th>
+
+                                    <th
+                                    class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
+                                    Role </th>
+                                    <th
                                     class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">
                                     Actions</th>
                             </tr>
                         </thead>
                         <tbody class="block md:table-row-group">
-                            @foreach ($fields as $field)
+                            @foreach ($users as $user)
                                 <tr class="bg-gray-300 border border-grey-500 md:border-none block md:table-row">
                                     <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span
-                                            class="inline-block w-1/3 md:hidden font-bold">ID</span>{{ $field->address }}
+                                            class="inline-block w-1/3 md:hidden font-bold">ID</span>{{ $user->id }}
                                     </td>
                                     <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span
-                                            class="inline-block w-1/3 md:hidden font-bold">ID</span>{{ $field->area }}
+                                            class="inline-block w-1/3 md:hidden font-bold">ID</span>{{ $user->name }}
                                     </td>
                                     <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span
-                                            class="inline-block w-1/3 md:hidden font-bold">ID</span>{{ $field->type }}
+                                            class="inline-block w-1/3 md:hidden font-bold">ID</span>{{ $user->email }}
                                     </td>
                                     <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span
-                                            class="inline-block w-1/3 md:hidden font-bold">ID</span>{{ $field->company_id }}
+                                            class="inline-block w-1/3 md:hidden font-bold">ID</span>{{ $user->company_id }}
+                                    </td>
+                                    <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell"><span
+                                            class="inline-block w-1/3 md:hidden font-bold">ID</span>{{ $user->role }}
                                     </td>
                                     <td class="p-2 md:border md:border-grey-500 text-left block md:table-cell">
                                         <span class="inline-block w-1/3 md:hidden font-bold">ID</span>
+                                    @if(Auth::user()->role == 'admin')
                                         <button
                                             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded"><a
-                                                href="{{ url('/dashboard/edit/' . $field->id) }}">Edit</a></button>
+                                                href="{{ url('/users/edit/' . $user->id) }}">Edit</a></button>
                                         <button
                                             class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded"><a
-                                                href="{{ url('/dashboard/delete/' . $field->id) }}">Delete</a></button>
+                                                href="{{ url('/users/delete/' . $user->id) }}">Delete</a></button>
+                                    @endif
+                                    
                                     </td>
                                 </tr>
                             @endforeach
@@ -98,52 +94,21 @@
                         </tbody>
                     </table>
                     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded"><a
-                href="{{ url('/dashboard/createpage/') }}">Create</a></button>
+                href="{{ url('/users/create/') }}">Create</a>
+        </button>
+                    
+
 
 
 
                 </div>
             </div>
+            
         </div>
-    </div>
-
-    <div id="map" style="height:400px;">
-    @if(Auth::user()->role == 'admin')
-    <script>
         
-        var map = L.map('map').setView([51.505, -0.09], 13);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-
-    
-    var polygon = L.polygon([
-        [51.509, -0.08],
-        [51.503, -0.06],
-        [51.51, -0.047]
-    ]).addTo(map);
-
-    map.pm.addControls({  
-  position: 'topleft',  
-  drawCircle: false,  
-});  
-
-    $.getJSON("geojson/map1.geojson", function(data) {
-    L.geoJSON(data).addTo(map);
-    });
-
-// show path variable
-    console.log(path);
-
-
-
-
-</script>
-@endif 
-    </script>
     </div>
+
+    <div id="map" style="height:400px;"></div>
 
 
 

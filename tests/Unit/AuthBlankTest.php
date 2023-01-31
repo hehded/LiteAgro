@@ -1,15 +1,20 @@
 <?php
 
-namespace Tests\Feature\Auth;
+namespace Tests\Unit;
+
+use Tests\TestCase;
 
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
 
-class RegistrationTest extends TestCase
+
+class AuthBlankTest extends TestCase
 {
-    use RefreshDatabase;
-
+    /**
+     * A basic unit test example.
+     *
+     * @return void
+     */
     public function test_registration_screen_can_be_rendered()
     {
         $response = $this->get('/register');
@@ -17,16 +22,16 @@ class RegistrationTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_new_users_can_register()
+    public function test_new_users_can_register_without_password()
     {
         $response = $this->post('/register', [
             'name' => 'Test User',
             'email' => 'test@example.com',
-            'password' => 'password',
-            'password_confirmation' => 'password',
+            'company_id' => '1',
         ]);
 
         $this->assertAuthenticated();
         $response->assertRedirect(RouteServiceProvider::HOME);
-    }
 }
+}
+

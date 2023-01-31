@@ -21,15 +21,31 @@
 
                         <label for="area" class="control-label">Area: </label>
 
+                        
                         <input type="text" name="area" class="form-control" value="{{ $data->area }}"> <br>
 
                         <label for="type" class= "control-label">Type:</label>
 
                         <input type= "text" name="type" class="form-control" value="{{ $data->type }}"> <br>
 
-                        <input type="submit" class="btn btn-primary">
+                        <select name="company_id" class-"form-control">
+                        @foreach ($company as $companies)
+                        <option value="{{ $companies->id }}"> Company ID {{ $companies->id }}</option>
+                        @endforeach
+                        </select>
+
+                        <button type="submit" class="p-4 bg-blue-400"> Create</button>
 
 
+                        @if ($errors->any())
+                        <div class="alert alert-danger bg-red">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     </form>
 
 

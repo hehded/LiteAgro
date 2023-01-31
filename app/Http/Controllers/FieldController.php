@@ -14,6 +14,7 @@ class FieldController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+     
     public function show()
     {
         $field = Field::all();
@@ -80,6 +81,7 @@ class FieldController extends Controller
         $field->address = $request->input('address');
         $field->area = $request->input('area');
         $field->type = $request->input('type');
+        $field->company_id = $request->input('company_id');
 
 
         $field->save();
