@@ -158,7 +158,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [CompanyController::class, 'company'],  function () {
-    return view('dashboard');
+    return view('dashboard', compact('geofield'));
 });
 
 Route::get('/dashboard1', [FieldController::class, 'show'], function () {

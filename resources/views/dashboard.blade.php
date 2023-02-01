@@ -117,7 +117,12 @@
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
+// How to take data from database to variable
+
+    
    
+
+    
     
     var polygon = L.polygon([
         [51.509, -0.08],
@@ -125,17 +130,17 @@
         [51.51, -0.047]
     ]).addTo(map);
 
-    map.pm.addControls({  
-  position: 'topleft',  
-  drawCircle: false,  
-});  
+   
+    
 
-    $.getJSON("geojson/map1.geojson", function(data) {
-    L.geoJSON(data).addTo(map);
-    });
+    var path = @json($geofield);
 
-// show path variable
+    L.geoJSON(JSON.parse(path)).addTo(this.map);
+
+   
+    
     console.log(path);
+   
 
 
 

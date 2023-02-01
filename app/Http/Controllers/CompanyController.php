@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Termwind\Components\Dd;
 use View;
 use App\Models\Polygons;
+use App\Models\Geofield;
 
 // Route::get('LoginRequest/{comp_id}', 'LoginRequest@getCompanyId')->name('')
 
@@ -103,7 +104,15 @@ class CompanyController extends Controller
 
         $company = Company::find(Auth::user()->company_id);
         $fields = Field::where('company_id', Auth::user()->company_id)->get();
-        return view('dashboard', ['company' => $company, "fields" => $fields]);
+        // create $geofield that uses geojson column from geofields table
+        $geofielddata = Geofield::all();
+        foreach ($geofielddata as $row) {
+            $geofield = $row->geojson;
+        }
+        
+
+    
+        return view('dashboard', ['company' => $company, "fields" => $fields], compact('geofield'));
     }
 
 
