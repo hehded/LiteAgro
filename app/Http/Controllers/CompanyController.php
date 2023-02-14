@@ -64,7 +64,7 @@ class CompanyController extends Controller
         return view('compedit', ['companies' => $company]);
     }
 
-    
+
 
     public function EditCompany(Request $request, $id)
     {
@@ -107,11 +107,11 @@ class CompanyController extends Controller
         // create $geofield that uses geojson column from geofields table
         $geofielddata = Geofield::all();
         foreach ($geofielddata as $row) {
-            $geofield = $row->geojson;
+            $geofield[] = $row->geojson;
         }
-        
 
-    
+
+
         return view('dashboard', ['company' => $company, "fields" => $fields], compact('geofield'));
     }
 

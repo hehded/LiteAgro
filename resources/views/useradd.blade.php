@@ -21,45 +21,45 @@
 
                         <label for="email" class="control-label">Email: </label>
 
-                        <input type="text" name="email" class="form-control" > <br>
+                        <input type="text" name="email" class="form-control"> <br>
 
-                        <label for="password" class= "control-label">Password:</label>
+                        <label for="password" class="control-label">Password:</label>
 
-                        <input type= "text" name="password" class="form-control"> <br>
+                        <input type="text" name="password" class="form-control"> <br>
 
                         <!-- <label for="role" class= "control-label">Role:</label>
 
                         <input type= "text" name="role" class="form-control"> <br> -->
 
                         <select name="role" class-"form-control">
-                        <option value="admin">Admin</option>
-                        <option value="user">User</option>
-                        <option value="manager">Manager</option>
-                        <option value="company">Company</option>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                            <option value="manager">Manager</option>
+                            <option value="company">Company</option>
                         </select>
                         <select name="company_id" class-"form-control">
-                        @foreach ($companies as $company)
-                        <option value="{{ $company->id }}"> Company ID {{ $company->id }}</option>
-                        @endforeach
+                            @foreach ($companies as $company)
+                            <option value="{{ $company->id }}"> Company ID {{ $company->id }}</option>
+                            @endforeach
                         </select>
 
 
                         <button type="submit" class="p-4 bg-blue-400"> Create</button>
 
-                        
-                        
-                        
-                        
+
+
+
+
 
                         @if ($errors->any())
                         <div class="alert alert-danger bg-red">
                             <ul>
                                 @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
+                                <li>{{ $error }}</li>
                                 @endforeach
                             </ul>
                         </div>
-                    @endif
+                        @endif
 
                     </form>
 
